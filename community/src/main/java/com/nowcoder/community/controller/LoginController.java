@@ -133,7 +133,7 @@ public class LoginController implements CommunityConstant {
 
     @RequestMapping(path="/logout", method=RequestMethod.GET)
     public String logOut(@CookieValue("ticket") String ticket){
-        userService.logOut(ticket);
+        userService.logout(ticket);
         return "redirect:/login";
     }
 
